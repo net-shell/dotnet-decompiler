@@ -1,0 +1,62 @@
+﻿<Window x:Class="XapEditor.AboutWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize"
+        Title="About Rain" Height="400" Width="600" AllowsTransparency="True" Background="Transparent">
+    <Border BorderBrush="#333" BorderThickness="4" CornerRadius="5">
+        <Border.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                <GradientStop Color="#444" Offset="0" />
+                <GradientStop Color="#E999" Offset="0.5" />
+            </LinearGradientBrush>
+        </Border.Background>
+        <Grid Margin="10">
+            <Grid.Background>
+                <ImageBrush ImageSource="/images/flor.png" Stretch="None" AlignmentX="Right" AlignmentY="Top" />
+            </Grid.Background>
+            <TextBlock Text=".net" FontSize="24" Foreground="#3FFF" Margin="0,-5" />
+            <Image Source="/images/rain-logo.png" Width="300" Height="100" VerticalAlignment="Top" HorizontalAlignment="Left" />
+            <StackPanel Margin="0,100,0,0">
+                <TextBlock Foreground="#6FFF" TextWrapping="Wrap">
+                    <Run Text="coding by Ash; thanks to:" FontSize="24" Foreground="#3FFF" />
+                    <LineBreak />
+                    <LineBreak />
+                    <Run FontWeight="Bold" Text="&gt; The XDA community (especially sensboston) and some of my friends" />
+                    <Run Text="for beta-testing;" />
+                    <LineBreak />
+                    <Run FontWeight="Bold" Text="&gt; Mono.Cecil and The ICSharp Project" />
+                    <Run Text="that's been of great help;" />
+                    <LineBreak />
+                    <Run FontWeight="Bold" Text="&gt; Microsoft" />
+                    <Run Text="for not caring too much about security;" />
+                    <LineBreak />
+                    <Run FontWeight="Bold" Text="&gt; Algorithm, Bulb, Cynic, Depeche Mode, Dream Theater, Guano Apes, Haken, In Flames, Karnivool, Korn, Ministry, Morphine, Myrath, Pain of Salvation, Pearl Jam, Periphery, Pink Floyd, Porcupine Tree, Prodigy, Tool, SwissRadio Modern Jazz, Radiowax and SmoothJazz.com" />
+                    <Run Text="for being in my playlist while coding this shit;" />
+                </TextBlock>
+                <TextBlock TextAlignment="Center" FontWeight="Bold" Foreground="#000" Margin="0,20,0,0" TextWrapping="Wrap">
+                    <Run Text="Rain is free. I really want to keep it that way but I also need to support myself." />
+                    <LineBreak />
+                    <Run Text="If you find Rain useful, " />
+                    <Run Text="please donate" Foreground="#F30" />
+                    <Run Text="and support the project. Thanks!" />
+                </TextBlock>
+            </StackPanel>
+            <Button VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="24" Width="160" Click="Button_Click">
+                <Button.Content>
+                    <Grid Width="140">
+                        <Image Source="/icons/win8/like_outline.png" Height="26" HorizontalAlignment="Left">
+                            <Image.Effect>
+                                <DropShadowEffect Color="#000" ShadowDepth="0" BlurRadius="10" />
+                            </Image.Effect>
+                        </Image>
+                        <TextBlock Text="donate" Foreground="#F30" TextAlignment="Right" />
+                    </Grid>
+                </Button.Content>
+                <Button.Effect>
+                    <DropShadowEffect BlurRadius="80" RenderingBias="Performance" Color="#F30" ShadowDepth="10" Direction="270" />
+                </Button.Effect>
+            </Button>
+            <Button x:Name="btnClose" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="160" Height="22" Content="close" Click="Close_Click" />
+        </Grid>
+    </Border>
+</Window>

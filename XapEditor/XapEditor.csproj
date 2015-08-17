@@ -1,0 +1,391 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E83B1848-DB64-4B7C-9DCE-06D002B6C616}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XapEditor</RootNamespace>
+    <AssemblyName>XapEditor</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <UpdateUrl>http://ash.kvodae.com/apps/XapEditor/</UpdateUrl>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>images\rain.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>20FBFF66F4C36C2CAEC2B2E895D5A593CA1508C0</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DelaySign>false</DelaySign>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Be.Windows.Forms.HexBox, Version=1.4.7.13476, Culture=neutral, PublicKeyToken=e0e5adf0ebc99863, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\Ash\Downloads\Be.HexEditor.147\bin\Be.Windows.Forms.HexBox.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.AvalonEdit, Version=4.1.0.7411, Culture=neutral, PublicKeyToken=9cc39be672370310, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\Ash\Downloads\ILSpy_Master_2.0.0.1571_Binaries\ICSharpCode.AvalonEdit.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.Decompiler, Version=1.0.0.1000, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\Ash\Downloads\ILSpy_Master_2.0.0.1571_Binaries\ICSharpCode.Decompiler.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.NRefactory, Version=1.0.4444.41155, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\Ash\Downloads\ILSpy_Master_2.0.0.1571_Binaries\ICSharpCode.NRefactory.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.NRefactory.CSharp, Version=5.0.0.4, Culture=neutral, PublicKeyToken=d4bfe873e7598c49, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\ICSharpCode.NRefactory.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Smartdevice.Connectivity, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Common Files\microsoft shared\Phone Tools\CoreCon\10.0\Bin\Microsoft.Smartdevice.Connectivity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Mono.Cecil, Version=0.9.5.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\Ash\Downloads\ILSpy_Master_2.0.0.1571_Binaries\Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="AboutWindow.xaml.cs">
+      <DependentUpon>AboutWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CompilatorResult.cs" />
+    <Compile Include="controls\AshFile.xaml.cs">
+      <DependentUpon>AshFile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Marketplace.xaml.cs">
+      <DependentUpon>Marketplace.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\MetroTile.xaml.cs">
+      <DependentUpon>MetroTile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\Startpage.xaml.cs">
+      <DependentUpon>Startpage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="controls\XapDeployer.xaml.cs">
+      <DependentUpon>XapDeployer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="decompiler\AvalonEditTextOutput.cs" />
+    <Compile Include="decompiler\ResourceDecompiler.cs" />
+    <Compile Include="decompiler\Fusion.cs" />
+    <Compile Include="decompiler\ISmartTextOutput.cs" />
+    <Compile Include="decompiler\MSIL.cs" />
+    <Compile Include="decompiler\NetDasm.cs" />
+    <Compile Include="decompiler\RelayCommand.cs" />
+    <Compile Include="controls\GAC.xaml.cs">
+      <DependentUpon>GAC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ScrollableTabPanel.cs" />
+    <Compile Include="Xap.cs" />
+    <Page Include="AboutWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="controls\AshFile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="controls\GAC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="controls\Marketplace.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="controls\MetroTile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="controls\Startpage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="controls\XapDeployer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons\icon_dll.png" />
+    <Resource Include="icons\icon_file.png" />
+    <Resource Include="icons\icon_font.png" />
+    <Resource Include="icons\icon_img.png" />
+    <Resource Include="icons\icon_wav.png" />
+    <Resource Include="icons\icon_xaml.png" />
+    <Resource Include="icons\icon_xml.png" />
+    <Resource Include="icons\icon_xnb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\ico-inst.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons\icon_resource.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons\icon-fold.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\gear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons\ico-inst1.png" />
+    <Resource Include="icons\ico-inst2.png" />
+    <Resource Include="icons\ico-inst3.png" />
+    <Resource Include="icons\ico-inst4.png" />
+    <Resource Include="icons\ico-inst5.png" />
+    <Resource Include="icons\ico-inst6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\rain-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons\icon_dir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons\icon_save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons\icon_del.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons\icon_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons\icon_pp.png" />
+    <Resource Include="icons\icon_web.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons\disasm\Folder.Closed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons\disasm\Class.png" />
+    <Resource Include="icons\disasm\Constructor.png" />
+    <Resource Include="icons\disasm\Enum.png" />
+    <Resource Include="icons\disasm\Event.png" />
+    <Resource Include="icons\disasm\Field.png" />
+    <Resource Include="icons\disasm\FieldReadOnly.png" />
+    <Resource Include="icons\disasm\Interface.png" />
+    <Resource Include="icons\disasm\Method.png" />
+    <Resource Include="icons\disasm\NameSpace.png" />
+    <Resource Include="icons\disasm\Property.png" />
+    <Resource Include="icons\disasm\Resource.png" />
+    <Resource Include="icons\disasm\ResourceImage.png" />
+    <Resource Include="icons\disasm\ResourceResourcesFile.png" />
+    <Resource Include="icons\disasm\ResourceXml.png" />
+    <Resource Include="icons\disasm\ResourceXsd.png" />
+    <Resource Include="icons\disasm\ResourceXslt.png" />
+    <Resource Include="icons\disasm\StaticClass.png" />
+    <Resource Include="icons\disasm\Struct.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons\disasm\Assembly.png" />
+    <Resource Include="icons\disasm\ReferenceFolder.Closed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons\disasm\OverlayInternal.png" />
+    <Resource Include="icons\disasm\OverlayPrivate.png" />
+    <Resource Include="icons\disasm\OverlayProtected.png" />
+    <Resource Include="icons\disasm\OverlayProtectedInternal.png" />
+    <Resource Include="icons\disasm\OverlayStatic.png" />
+    <Resource Include="icons\disasm\SuperTypes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\back.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons\win8\documents.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons\win8\file.png" />
+    <Resource Include="icons\win8\folder.png" />
+    <Resource Include="icons\win8\like_outline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons\win8\box.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\rain.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\rain.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons\win8\error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\flor.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,177 @@
+﻿<Window x:Class="XapEditor.MainWindow" WindowStartupLocation="CenterScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ash="clr-namespace:XapEditor.controls"
+        Title="Rain" MinWidth="800" MinHeight="600" Width="600" Height="400" Icon="/XapEditor;component/images/rain.png"
+        KeyUp="Window_KeyUp">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="22"/>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="22" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1" Grid.RowSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition x:Name="leftCol" Width="0" />
+                <ColumnDefinition Width="*" MinWidth="100" />
+            </Grid.ColumnDefinitions>
+            <Grid Margin="5,0,5,5">
+                <Grid Margin="-10,0,0,70">
+                    <Grid>
+                        <TreeView x:Name="dgXap" MouseDoubleClick="dgXap_MouseDoubleClick" SelectedItemChanged="dgXap_SelectedItemChanged" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Background="Transparent" KeyUp="dgXap_KeyUp" BorderThickness="0">
+                            <TreeView.ItemTemplate>
+                                <HierarchicalDataTemplate ItemsSource="{Binding Children}">
+                                    <Grid>
+                                        <Image HorizontalAlignment="Left" Width="16" Height="16" Source="{Binding IconPath}" />
+                                        <TextBlock Margin="20,2" Text="{Binding Name}" />
+                                    </Grid>
+                                </HierarchicalDataTemplate>
+                            </TreeView.ItemTemplate>
+                        </TreeView>
+                    </Grid>
+                </Grid>
+                <Border VerticalAlignment="Bottom" Height="65" BorderThickness="0,1,0,0">
+                    <Grid>
+                        <Grid x:Name="bottomPane0">
+                            <Image x:Name="dImage" Width="65" HorizontalAlignment="Left" Stretch="Uniform" />
+                            <StackPanel Margin="70,0,0,0">
+                                <TextBlock x:Name="dAppName" FontSize="24" FontWeight="Bold" Margin="0,-10,0,0" />
+                                <TextBlock x:Name="dAppProp" FontSize="11" FontWeight="Bold" Foreground="#9000" TextWrapping="Wrap" />
+                            </StackPanel>
+                        </Grid>
+                        <Grid x:Name="bottomPane1" Visibility="Collapsed">
+                            <Image Width="65" HorizontalAlignment="Left" Stretch="Uniform" Source="/images/gear.png" />
+                            <StackPanel Margin="70,0,0,0">
+                                <TextBlock x:Name="AsmName" FontSize="24" FontWeight="Bold" />
+                                <TextBlock x:Name="AsmProp" Foreground="#C000" TextWrapping="Wrap" />
+                            </StackPanel>
+                        </Grid>
+                    </Grid>
+                </Border>
+            </Grid>
+            <GridSplitter Width="5" />
+            <TabControl x:Name="filez" Grid.Column="1" SelectionChanged="filez_SelectionChanged" Style="{StaticResource AshTabControl}" />
+        </Grid>
+        <Menu Grid.ColumnSpan="2" IsMainMenu="True">
+            <Menu.Items>
+                <MenuItem Header="File">
+                    <MenuItem Header="Open XAP" Click="Menu_Open">
+                        <MenuItem.Icon>
+                            <Image Source="/icons/icon_dir.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="Save XAP" Click="Menu_Repack" x:Name="menu_savexap" IsEnabled="False">
+                        <MenuItem.Icon>
+                            <Image Source="/icons/icon_save.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="Close XAP" Click="Menu_Close" x:Name="menu_close" IsEnabled="False">
+                        <MenuItem.Icon>
+                            <Image Source="/icons/icon_del.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <Separator />
+                    <MenuItem Header="Open Files" Click="Menu_OpenFiles">
+                        <MenuItem.Icon>
+                            <Image Source="/icons/icon_dir.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="Save File" Click="Menu_Save" x:Name="menu_save" IsEnabled="False">
+                        <MenuItem.Icon>
+                            <Image Source="/icons/icon_save.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="Close File" Click="Menu_CloseFile" x:Name="menu_closefile" IsEnabled="False">
+                        <MenuItem.Icon>
+                            <Image Source="/icons/icon_del.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <Separator />
+                    <MenuItem x:Name="menu_recentxap" Header="Recent XAPs" />
+                    <MenuItem x:Name="menu_recent" Header="Recent Files" />
+                    <MenuItem Header="Exit" Click="Menu_Exit" />
+                </MenuItem>
+                <MenuItem x:Name="menu_pack" Header="XAP" IsEnabled="False">
+                    <MenuItem x:Name="menu_sel" Header="Selection" IsEnabled="False">
+                        <MenuItem Header="Save Selection As" Click="Menu_SaveAs">
+                            <MenuItem.Icon>
+                                <Image Source="/icons/icon_save.png" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Header="Swap Selection" Click="Menu_Swap" />
+                        <MenuItem Header="Delete Selection" Click="Menu_Delete">
+                            <MenuItem.Icon>
+                                <Image Source="/icons/icon_del.png" Width="14" Height="14" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Header="Edit Selection" Click="Menu_Edit">
+                            <MenuItem.Icon>
+                                <Image Source="/icons/icon_edit.png" Width="16" Height="16" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Header="Open As Binary" Click="Menu_OpenAsBin">
+                            <MenuItem.Icon>
+                                <Image Source="/icons/icon_edit.png" Width="16" Height="16" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Header="Open As Text" Click="Menu_OpenAsText">
+                            <MenuItem.Icon>
+                                <Image Source="/icons/icon_edit.png" Width="16" Height="16" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Header="Open With Default Program" Click="Menu_OpenSelection" />
+                        <MenuItem Header="Open With..." Click="Menu_OpenWith" />
+                    </MenuItem>
+                    <MenuItem Header="Save" Click="Menu_Repack">
+                        <MenuItem.Icon>
+                            <Image Source="/icons/icon_save.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="Add Files" Click="Menu_AddFiles">
+                        <MenuItem.Icon>
+                            <Image Source="/icons/icon_file.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="New Folder" Click="Menu_AddFolder">
+                        <MenuItem.Icon>
+                            <Image Source="/icons/icon_dir.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="Deploy" Click="Menu_Deploy">
+                        <MenuItem.Icon>
+                            <Image Source="/icons/icon_dll.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+                <MenuItem Header="Tools">
+                    <MenuItem Header="Global Assembly Cache" Click="Menu_GAC" />
+                    <MenuItem Header="WP7 Marketplace" Click="Menu_Marketplace" />
+                    <MenuItem Header="WP7 App Deployment" Click="Menu_XapDeployer" />
+                </MenuItem>
+                <MenuItem Header="Help">
+                    <MenuItem Header="Rain Online" Click="Menu_Online">
+                        <MenuItem.Icon>
+                            <Image Source="/icons/icon_web.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="Donate" Click="Menu_Donate">
+                        <MenuItem.Icon>
+                            <Image Source="/icons/icon_pp.png" Width="20" Height="20" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="About" Click="Menu_About" />
+                </MenuItem>
+            </Menu.Items>
+        </Menu>
+        <StatusBar Grid.Row="2" Visibility="Collapsed">
+            <StatusBarItem DockPanel.Dock="Right">
+                <TextBlock x:Name="status_secondary" />
+            </StatusBarItem>
+            <StatusBarItem>
+                <TextBlock x:Name="status" Text="Ready" />
+            </StatusBarItem>
+        </StatusBar>
+    </Grid>
+</Window>
+
+    

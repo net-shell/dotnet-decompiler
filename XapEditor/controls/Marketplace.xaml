@@ -1,0 +1,63 @@
+﻿<UserControl x:Class="XapEditor.controls.Marketplace"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="500">
+    <Grid Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="22" />
+            <RowDefinition />
+            <RowDefinition Height="20" />
+            <RowDefinition Height="54" />
+        </Grid.RowDefinitions>
+
+        <ComboBox x:Name="cbStore" IsEditable="True" HorizontalAlignment="Right" Width="100" SelectedIndex="0">
+            <ComboBoxItem Content="zest" />
+            <ComboBoxItem Content="htc" />
+            <ComboBoxItem Content="samsung" />
+            <ComboBoxItem Content="dell" />
+            <ComboBoxItem Content="att" />
+            <ComboBoxItem Content="tmous" />
+            <ComboBoxItem Content="lge" />
+        </ComboBox>
+        <ComboBox x:Name="cbLang" IsEditable="True" HorizontalAlignment="Right" Width="100" Margin="105,0" SelectedIndex="0">
+            <ComboBoxItem Content="en-US" />
+            <ComboBoxItem Content="en-GB" />
+            <ComboBoxItem Content="en-AU" />
+            <ComboBoxItem Content="en-CA" />
+            <ComboBoxItem Content="es-ES" />
+            <ComboBoxItem Content="fr-FR" />
+            <ComboBoxItem Content="en-US" />
+            <ComboBoxItem Content="it-IT" />
+            <ComboBoxItem Content="de-DE" />
+        </ComboBox>
+        <Button Click="Button_Click" Width="100" HorizontalAlignment="Right" Margin="210,0" Content="Search" />
+        <TextBox x:Name="tbQuery" Margin="0,0,315,0" />
+
+        <DataGrid x:Name="dgResult" Grid.Row="1" IsReadOnly="True" HeadersVisibility="Column" AutoGenerateColumns="False" Margin="0,5" HorizontalGridLinesBrush="#999" VerticalGridLinesBrush="#DDD" SelectionChanged="dgResult_SelectionChanged" MouseDoubleClick="dgResult_MouseDoubleClick">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Title" Binding="{Binding Title}" Width="*" />
+                <DataGridTextColumn Header="Category" Binding="{Binding Category}" Width="80" />
+                <DataGridTextColumn Header="Rating" Binding="{Binding Rating}" Width="50" />
+                <DataGridTextColumn Header="Publisher" Binding="{Binding Publisher}" Width="80" />
+            </DataGrid.Columns>
+        </DataGrid>
+        
+        <ProgressBar x:Name="prog" Grid.Row="2" Height="15" VerticalAlignment="Top" Minimum="0" Maximum="100" Value="0" IsIndeterminate="True" />
+        <TextBlock x:Name="tbProg" Visibility="Collapsed" Grid.Row="2" Opacity="0.5" TextAlignment="Center" FontSize="11" Text="{Binding ElementName=prog, Path=Value, StringFormat=\{0\}%}" />
+        
+        <Border Grid.Row="3" Background="#EEE" CornerRadius="5" Padding="3" >
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Button Click="Button_Click_1" x:Name="btnDownload" Content="Download XAP" VerticalAlignment="Top" IsEnabled="False" />
+                <Button Click="Button_Click_2" x:Name="btnOpen" Content="Open XAP" VerticalAlignment="Bottom" IsEnabled="False" />
+                <TextBlock x:Name="tbDetails" TextWrapping="Wrap" Grid.Column="1" Margin="5,0,0,0" />
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>
