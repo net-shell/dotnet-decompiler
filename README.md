@@ -3,14 +3,6 @@
 A .NET decompiler with support for XAP applications.
 Allows users to decompile assemblies and resources in a code editor, make changes and compile the code back to the assembly.
 
-### Sorry, what?
-
-I have plans to add a few more features and make a complete update for Windows (Phone) 10.
-
-Since this software is not yet stable I'd like to mention Reflector as an alternative, but I think it's way too overpriced and I don't find it especially user-friendly as well.
-
-.NET Rain is donateware. Its development pretty much depends on your feedback and support.
-
 ### Features
 * Decompile .NET assemblies to C# and allow editing/compiling the high-level code back to CIL
 * Edit CIL instructions in method bodies
@@ -19,6 +11,14 @@ Since this software is not yet stable I'd like to mention Reflector as an altern
 * Edit the contents of a XAP by adding, removing or swapping files, or using internal editors for certain resource types.
 * Integrated editors for text, hex, manifest, resource, XML and XAML.
 * XAP package manager (compatible with Windows Phone and Silverlight applications) allowing to view and extract XAP contents.
+
+### Sorry, what?
+
+I have plans to add a few more features and make a complete update for Windows (Phone) 10.
+
+Since this software is not yet stable I'd like to mention Reflector as an alternative, but I think it's way too overpriced and I don't find it especially user-friendly as well.
+
+.NET Rain is donateware. Its development pretty much depends on your feedback and support.
 
 ### DLL Deep Throat
 The program tries to locate referenced assemblies but so far it does a very poor job and in many cases you'll have to manually point them. Sorry, it's open source :)
