@@ -1,7 +1,7 @@
 # .NET Rain
 
 A .NET decompiler with support for XAP applications.
-Allows users to decompile assemblies and resources in a code editor, make changes and compile the code back to the assembly.
+Allows <s>hackers</s> developers to decompile assemblies and resources in a code editor, make changes and compile the code back to the assembly.
 
 ### [DOWNLOAD](https://code.google.com/p/dotnet-rain/downloads/detail?name=beta3.zip&can=2&q=) v 0.0.3
 
