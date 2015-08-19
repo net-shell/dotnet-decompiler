@@ -13,6 +13,7 @@ Allows users to decompile assemblies and resources in a code editor, make change
 * Edit the contents of a XAP by adding, removing or swapping files, or using internal editors for certain resource types.
 * Integrated editors for text, hex, manifest, resource, XML and XAML.
 * XAP package manager (compatible with Windows Phone and Silverlight applications) allowing to view and extract XAP contents.
+* Does laundry, has mastered Italian cuisine, cleans and makes mind-blowjobs when asked kindly and treated right.
 
 ### Sorry, what?
 
