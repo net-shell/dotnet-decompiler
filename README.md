@@ -34,7 +34,8 @@ For Windows Phone 7.5 the path for most assemblies looks like `C:\Program Files[
 ### Some Links
 * [Old Google Code page](https://code.google.com/p/dotnet-rain/)
 * [15 minutes of fame](http://www.xda-developers.com/take-apart-xap-at-your-leisure-with-net-rain/)
-* [XDA forums](http://forum.xda-developers.com/showthread.php?t=1443692)
+* [Old XDA forums thread](http://forum.xda-developers.com/showthread.php?t=1443692)
+* [Active XDA forums thread](http://forum.xda-developers.com/windows-phone-8/development/xap-dll-exe-hacking-tool-disassembler-t3182752)
 
 ### Screenshits
 <img src="http://i.imgur.com/dppU8Mr.png">
