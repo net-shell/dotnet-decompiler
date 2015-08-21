@@ -37,6 +37,25 @@ For Windows Phone 7.5 the path for most assemblies looks like `C:\Program Files[
 * [Old XDA forums thread](http://forum.xda-developers.com/showthread.php?t=1443692)
 * [Active XDA forums thread](http://forum.xda-developers.com/windows-phone-8/development/xap-dll-exe-hacking-tool-disassembler-t3182752)
 
+### Contributing
+
+Obviously, the project is open-source. Once the world is mine I shall build monuments for those who decide to take a part in building .NET Rain. Contact me for anything you can help with.
+
+Some of your skills that could be useful may be:
+* Blogging: You can write down the results of your testing, your ideas and stuff about .NET Rain the way you see it.
+* UI/UX design: You don't have to bother with WPF implementation. Photoshop designs are good enough.
+* C#/WPF programming: You can contribute to the code quality and all user-related features of the application.
+* C# Reflection mastery: The "core" is in a very alpha state and is full of bugs. The are many planned new features, too.
+* Donations: They will be wisely spent.
+* Crowd-funding experience: You can help with raising money to pay for community-hired professionals to write code that will later remain open-source.
+* Virgin goat blood: For recreational uses.
+
+### Roadmap
+
+Cumming soon (1).
+
+(1) If you related this bad joke to yourself even for a moment you should consider there may be serious underlying conditions causing premature ejaculation. Only you can take care of yourself because generally nobody really cares.
+
 ### Screenshits
 <img src="http://i.imgur.com/dppU8Mr.png">
 <img src="http://i.imgur.com/SvvdYU1.png">
