@@ -3,7 +3,7 @@
 A .NET decompiler with support for XAP applications.
 Allows <s>hackers</s> developers to decompile assemblies and resources in a code editor, make changes and compile the code back to the assembly.
 
-### [DOWNLOAD](https://code.google.com/p/dotnet-rain/downloads/detail?name=beta3.zip&can=2&q=) v 0.0.3
+### [DOWNLOAD](https://code.google.com/p/dotnet-rain/downloads/detail?name=beta3.zip&can=2&q=) v 0.0.3 (old build, breaks more than usual)
 
 ### Features
 * Decompile .NET assemblies to C# and allow editing/compiling the high-level code back to CIL
