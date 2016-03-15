@@ -1,4 +1,4 @@
-# .NET Rain
+# Quantum Vaginer
 
 A .NET decompiler with support for XAP applications.
 Allows <s>hackers</s> developers to decompile assemblies and resources in a code editor, make changes and compile the code back to the assembly.
@@ -39,10 +39,10 @@ For Windows Phone 7.5 the path for most assemblies looks like `C:\Program Files[
 
 ### Contributing
 
-Obviously, the project is open-source. Once the world is mine I shall build monuments for those who decide to take a part in building .NET Rain. Contact me for anything you can help with.
+Obviously, the project is open-source. Once the world is mine I shall build monuments for those who decide to take a part in building the project. Contact me for anything you can help with.
 
 Some of your skills that could be useful may be:
-* Blogging: You can write down the results of your testing, your ideas and stuff about .NET Rain the way you see it.
+* Blogging: You can write down the results of your testing, your ideas and stuff about the project the way you see it.
 * UI/UX design: You don't have to bother with WPF implementation. Photoshop designs are good enough.
 * C#/WPF programming: You can contribute to the code quality and all user-related features of the application.
 * C# Reflection mastery: The "core" is in a very alpha state and is full of bugs. The are many planned new features, too.
