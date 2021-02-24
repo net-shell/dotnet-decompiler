@@ -1,4 +1,4 @@
-# Quantum Vaginer
+# .NET Decompiler
 
 A .NET decompiler with support for XAP applications.
 Allows <s>hackers</s> developers to decompile assemblies and resources in a code editor, make changes and compile the code back to the assembly.
